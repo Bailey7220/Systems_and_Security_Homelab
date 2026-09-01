@@ -38,10 +38,10 @@ Reading about VLANs, Active Directory, and monitoring stacks is not the same as 
 
 | Service | Type | Purpose |
 |---|---|---|
-| OPNsense | VM201 | Firewall and routing, network segmentation enforcement |
-| Pi-hole | VM105 | Network-wide DNS filtering and DNS resolution |
-| NGINX Proxy Manager | CT103 | Reverse proxy and TLS certificate management for internal services |
-| TrueNAS | VM100 | Centralized storage |
+| OPNsense | VM | Firewall and routing, network segmentation enforcement |
+| Pi-hole | VM | Network-wide DNS filtering and DNS resolution |
+| NGINX Proxy Manager | CT | Reverse proxy and TLS certificate management for internal services |
+| TrueNAS | VM | Centralized storage |
 
 ### Directory and identity
 
@@ -59,10 +59,10 @@ Windows Server 2022 running **Active Directory Domain Services**, with organizat
 
 | Service | Type | Purpose |
 |---|---|---|
-| GitLab | VM106 | Self-hosted Git repositories and CI |
-| BookStack | CT102 | Internal documentation and runbooks |
+| GitLab | VM | Self-hosted Git repositories and CI |
+| BookStack | CT | Internal documentation and runbooks |
 | Home Assistant | VM | Home automation platform |
-| Jellyfin | VM104 | Media services |
+| Jellyfin | VM | Media services |
 
 ---
 
