@@ -1,7 +1,6 @@
 # Systems & Security Homelab
 
-A self-built, enterprise-style lab environment used to develop hands-on skills in virtualization, networking, systems administration, monitoring, and security. The lab runs production-pattern services on dedicated server hardware behind a managed switch and a segmented network.
-
+Enterprise-style lab environment used to develop hands-on skills in virtualization, networking, systems administration, monitoring, and security. The lab runs production services on dedicated server hardware behind a managed switch and a segmented network.
 This repository documents the architecture, the services running in it, and the operational practices used to maintain it.
 
 ---
