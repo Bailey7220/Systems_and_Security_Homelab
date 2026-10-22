@@ -2,7 +2,7 @@
 
 ## Scope
 
-An investigation guide for VM startup, guest connectivity, and OPNsense web-interface access in a Proxmox lab. The server is currently powered off. This document does not claim a verified root cause or successful incident resolution.
+An investigation guide for VM startup, guest connectivity, and OPNsense web-interface access in a Proxmox lab.
 
 ## Describe the symptom first
 
