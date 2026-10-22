@@ -7,7 +7,7 @@ This repository documents the architecture, the services running in it, and the 
 
 ## Why this exists
 
-Reading about VLANs, Active Directory, and monitoring stacks is not the same as running them. This lab exists to build and operate the same categories of infrastructure that businesses depend on — hypervisors, directory services, DNS, reverse proxies, backups, log aggregation, and metrics — and to troubleshoot them when they break.
+This lab exists to build and operate the same categories of infrastructure that businesses depend on — hypervisors, directory services, DNS, reverse proxies, backups, log aggregation, metrics and to troubleshoot them when they break.
 
 ---
 
