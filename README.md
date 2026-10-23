@@ -1,14 +1,31 @@
 # Systems & Security Homelab
 
-A personal lab developed to practice virtualization, VM networking, systems administration, monitoring, and security on dedicated server hardware.
+A personal learning lab for virtualization, VM networking, systems administration, monitoring, and security on dedicated server hardware.
 
-## Project focus
+> Status: the lab is powered off. This repository documents learning and previously described components, not an active production service. The component inventory is not a claim that every service has been independently verified or is currently running.
 
-The core learning focus is understanding how Proxmox virtual machines connect through virtual bridges, how OPNsense interfaces relate to those connections, and how to investigate loss of VM or firewall-management access.
+## Published work and evidence boundaries
 
-[VM networking and OPNsense troubleshooting](docs/vm-networking-opnsense.md)
+- [VM networking and OPNsense troubleshooting approach](docs/vm-networking-opnsense.md): a structured investigation guide, not a completed incident case study.
+- Environment overview below: previously documented hardware and software context, not a deployment or health-test record.
+- Related automation code lives in a separate repository linked below.
 
-## Environment overview
+No measured uptime, operational savings, verified network isolation, or successful backup restore is claimed here. A future case study should include actual observations, changes, and test outcomes rather than a hypothetical success narrative.
+
+## Learning focus
+
+Understand how Proxmox virtual machines connect through virtual bridges, how OPNsense interfaces relate to those connections, and how to investigate loss of VM or firewall-management access.
+
+The troubleshooting approach separates four layers:
+
+1. Physical connections: server NICs, switch ports, and upstream connectivity.
+2. Proxmox networking: bridges, attached interfaces, and VM network adapters.
+3. Guest configuration: interfaces, addresses, masks, and routes.
+4. Access controls: relevant VLAN configuration, routing, and firewall rules.
+
+OPNsense was previously described as a virtualized firewall/router. It is not currently routing traffic. Historical interface assignments and learning configurations should not be treated as a verified present-day topology.
+
+## Historical environment overview
 
 | Layer | Previously documented components |
 |---|---|
@@ -20,35 +37,25 @@ The core learning focus is understanding how Proxmox virtual machines connect th
 | Backup and monitoring | Proxmox Backup Server, Zabbix, Grafana, Kibana |
 | Applications | GitLab, BookStack, Home Assistant, Jellyfin |
 
-## Virtualization and networking
+This inventory preserves historical project context. It does not establish current patch levels, deployment completeness, successful restores, or the security of a running environment.
 
-Proxmox hosts full virtual machines and lightweight containers. Managed-switch VLANs and access controls to separate traffic, with an isolated subnet for lab workloads.
+## Skills practiced
 
-The networking work focuses on distinguishing four layers:
+- Virtualization and VM/container configuration.
+- Virtual bridges, guest connectivity, VLAN concepts, and firewall-management paths.
+- Windows/Linux administration, Active Directory, and Group Policy concepts.
+- Layered troubleshooting and technical documentation.
 
-1. Physical connections: server NICs, switch ports, and upstream connectivity.
-2. Proxmox networking: bridges, attached interfaces, and VM network adapters.
-3. Guest configuration: assigned interfaces, addresses, masks, and routes.
-4. Access controls: relevant VLAN configuration and firewall rules.
-
-OPNsense was operating as a virtualized firewall/router. It is not currently routing traffic. Its intended scope and interface assignments were for learning purposes, not consistent use.
-
-## Systems administration and operations
-
-Windows Server 2022 with Active Directory, organizational units, Group Policy, and account controls. It also includes monitoring, centralized logs, internal documentation, and version control.
-
-## Skills illustrated
-
-- Virtualization: VM and container configuration in Proxmox.
-- Networking: virtual bridges, guest connectivity, VLAN concepts, routing, and firewall-management access.
-- Systems administration: Windows Server, Active Directory, Group Policy, and Linux services.
-- Troubleshooting: separating physical, hypervisor, guest, and access-control issues.
-- Documentation: recording configuration, investigation steps, and verification boundaries.
+Judge implemented work by supporting evidence rather than the number of technologies in the inventory.
 
 ## Related work
 
-- [Infrastructure Automation Platform](https://github.com/Bailey7220/infrastructure-automation-platform)
+[Infrastructure Automation Platform](https://github.com/Bailey7220/infrastructure-automation-platform) contains Terraform, Ansible, and static-check configuration. This homelab repository focuses on environment context and troubleshooting documentation; the automation repository has its own status and verification limits.
 
-## Privacy
+## Privacy and safe documentation
 
-Personal lab only. Do not publish credentials, secrets, public addresses, identifying hostnames, or unredacted configuration exports.
+Personal lab only. Do not publish credentials, private keys, public addresses, identifying hostnames, or unredacted configuration exports. Preserve console access and a recovery path before changing management networking. Do not broadly disable protections merely to make a connectivity test pass.
+
+## Licensing
+
+Original documentation and original project code are available under the [MIT License](LICENSE), subject to [licensing scope](LICENSING.md). Third-party software and assets retain their applicable terms.
